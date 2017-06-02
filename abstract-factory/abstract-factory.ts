@@ -51,15 +51,15 @@ class BotTextFactory implements BotFactory {
 }
 
 (function() {
-  const botPizzaVoice = (new BotVoiceFactory()).createBotPizza();
+  const botVoice = new BotVoiceFactory();
+  const botPizzaVoice = botVoice.createBotPizza();
+  const botCoffeeVoice = botVoice.createBotCoffee();
   console.log(botPizzaVoice.oven());
-
-  const botPizzaText = (new BotTextFactory()).createBotPizza()
-  console.log(botPizzaText.oven());
-
-  const botCoffeeVoice = (new BotVoiceFactory()).createBotCoffee();
   console.log(botCoffeeVoice.pour());
 
-  const botCoffeeText = (new BotTextFactory()).createBotCoffee()
+  const botText = new BotTextFactory();
+  const botPizzaText = botText.createBotPizza();
+  const botCoffeeText = botText.createBotCoffee();
+  console.log(botPizzaText.oven());
   console.log(botCoffeeText.pour());
 })()
