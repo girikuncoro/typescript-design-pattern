@@ -33,19 +33,19 @@ class BotCoffeeText implements BotCoffee {
 }
 
 class BotVoiceFactory implements BotFactory {
-  createBotPizza() {
+  createBotPizza(): BotPizza {
     return new BotPizzaVoice();
   }
   
-  createBotCoffee() {
+  createBotCoffee(): BotCoffee {
     return new BotCoffeeVoice();
   }
 }
 class BotTextFactory implements BotFactory {
-  createBotPizza() {
+  createBotPizza(): BotPizza {
     return new BotPizzaText();
   }
-  createBotCoffee() {
+  createBotCoffee(): BotCoffee {
     return new BotCoffeeText();
   }
 }
