@@ -1,11 +1,11 @@
-interface BotAdapter {
-  sendMessage(): string;
-}
-
 class LineBotLegacy {
   sendMessageOldWay(): string {
     return "send message line old way";
   }
+}
+
+interface BotAdapter {
+  sendMessage(): string;
 }
 
 class LineBotAdapter implements BotAdapter {
